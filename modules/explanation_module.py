@@ -8,7 +8,7 @@ five endpoints run on the same backend.
 
 import google.generativeai as genai
 
-MODEL_NAME = "gemini-1.5-pro"
+MODEL_NAME = "gemini-flash-latest"
 
 
 def explain_topic(topic: str) -> str:
