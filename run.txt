@@ -1,0 +1,6 @@
+uvicorn main:app --reload
+
+pip install -r requirements.txt
+
+
+https://aistudio.google.com/app/apikey

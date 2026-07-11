@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduGenie — AI Learning Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-lamp">✦</span>
+        <span class="brand-name">EduGenie</span>
+      </div>
+      <p class="brand-tag">Your personal AI study companion</p>
+    </header>
+
+    <div class="layout">
+      <!-- Tab rail -->
+      <nav class="rail" id="rail">
+        <button class="rail-tab active" data-tab="qa">
+          <span class="rail-num">01</span>
+          <span class="rail-label">Ask a Question</span>
+        </button>
+        <button class="rail-tab" data-tab="explain">
+          <span class="rail-num">02</span>
+          <span class="rail-label">Explain a Topic</span>
+        </button>
+        <button class="rail-tab" data-tab="quiz">
+          <span class="rail-num">03</span>
+          <span class="rail-label">Generate a Quiz</span>
+        </button>
+        <button class="rail-tab" data-tab="summary">
+          <span class="rail-num">04</span>
+          <span class="rail-label">Summarize Text</span>
+        </button>
+        <button class="rail-tab" data-tab="learn">
+          <span class="rail-num">05</span>
+          <span class="rail-label">Learning Path</span>
+        </button>
+      </nav>
+
+      <!-- Panels -->
+      <main class="panel-area">
+
+        <!-- QnA -->
+        <section class="panel active" id="panel-qa">
+          <h2>Ask EduGenie a question</h2>
+          <p class="panel-hint">General knowledge, academic doubts — ask anything.</p>
+          <form id="qaForm" class="tool-form">
+            <input type="text" id="question" placeholder="Why is the sky blue?" required />
+            <button type="submit">Get Answer</button>
+          </form>
+          <div id="qaResult" class="output"></div>
+        </section>
+
+        <!-- Explanation -->
+        <section class="panel" id="panel-explain">
+          <h2>Need an explanation?</h2>
+          <p class="panel-hint">Get a simple, student-friendly breakdown of any concept.</p>
+          <form id="explainForm" class="tool-form">
+            <input type="text" id="topic" placeholder="Photosynthesis" required />
+            <button type="submit">Explain</button>
+          </form>
+          <div id="explainResult" class="output"></div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="panel" id="panel-quiz">
+          <h2>Generate a quiz</h2>
+          <p class="panel-hint">Paste a passage or topic — get 3 multiple-choice questions.</p>
+          <form id="quizForm" class="tool-form">
+            <input type="text" id="quizText" placeholder="Solar System" required />
+            <button type="submit">Generate Quiz</button>
+          </form>
+          <div id="quizResult" class="output quiz-output"></div>
+        </section>
+
+        <!-- Summary -->
+        <section class="panel" id="panel-summary">
+          <h2>Summarize a paragraph</h2>
+          <p class="panel-hint">Paste long content — get a clear, concise summary.</p>
+          <form id="summaryForm" class="tool-form">
+            <textarea id="summaryText" placeholder="Paste long content to summarize" required></textarea>
+            <button type="submit">Summarize</button>
+          </form>
+          <div id="summaryResult" class="output"></div>
+        </section>
+
+        <!-- Learning Path -->
+        <section class="panel" id="panel-learn">
+          <h2>Get a learning path</h2>
+          <p class="panel-hint">A structured, beginner-to-advanced plan for any topic.</p>
+          <form id="learnForm" class="tool-form">
+            <input type="text" id="learnTopic" placeholder="SQL" required />
+            <button type="submit">Get Recommendations</button>
+          </form>
+          <div id="learnResult" class="output"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
